@@ -1,4 +1,52 @@
-body {
-    background-color: aqua;
+$color_header-and-signup: rgb(28, 36, 49);
+$color_main-bg: rgb(24, 31, 42);
+$color_footer-bg: rgb(11, 21, 35);
+$color_testimonials-bg: rgb(32, 42, 60);
+$color_button-gradient1: rgb(101, 226, 217);
+$color_button-gradient2: rgb(51, 158, 204);
+$color_error: rgb(255, 66, 66);
+$color_maintext: rgb(255, 255, 255);
+$font_headings: 'Raleway'; 
+
+:root {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: $color_maintext;
+    font-size: 14px;
 }
 
+body {
+    background-color: $color_header-and-signup;
+    padding: 5rem 5.75rem;
+    display: flex;
+}
+
+.container {
+    width: 100vw;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font_headings;
+    font-size: 1.15rem;
+}
+
+.header__navbar ul {
+    display: flex;
+    gap: 4rem;
+    & a {
+        text-decoration: none;
+        color: $color_maintext;
+        &:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}
+
+.getstarted {
+    display: flex;
+    justify-content: center;
+}
