@@ -6,47 +6,141 @@ $color_button-gradient1: rgb(101, 226, 217);
 $color_button-gradient2: rgb(51, 158, 204);
 $color_error: rgb(255, 66, 66);
 $color_maintext: rgb(255, 255, 255);
-$font_headings: 'Raleway'; 
+$font_headings: "Raleway";
 
 :root {
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: $color_maintext;
-    font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: $color_maintext;
+  font-size: 14px;
+}
+
+h1,
+h2,
+.header {
+  font-family: $font_headings;
+  line-height: 2.5rem;
+}
+
+.button {
+  background-color: $color_button-gradient2;
+  text-decoration: none;
+  color: $color_maintext;
+  font-family: $font_headings;
+  font-weight: 700;
+  padding: 0.6rem 4.5rem;
+  border-radius: 10rem;
 }
 
 body {
-    background-color: $color_header-and-signup;
-    padding: 5rem 5.75rem;
-    display: flex;
+  background-color: $color_main-bg;
+  flex-direction: column;
+  line-height: 1.5rem;
 }
 
-.container {
-    width: 100vw;
-}
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font_headings;
+  background-color: $color_header-and-signup;
+  font-size: 0.8rem;
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: $font_headings;
-    font-size: 1.15rem;
-}
+  &__logo {
+    width: 25%;
+  }
 
-.header__navbar ul {
+  &__navbar ul {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     & a {
-        text-decoration: none;
-        color: $color_maintext;
-        &:hover {
-            text-decoration: underline;
-            font-weight: bold;
-        }
+      text-decoration: none;
+      color: $color_maintext;
+      &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+      }
     }
+  }
 }
 
 .getstarted {
-    display: flex;
-    justify-content: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: url("../images/bg-curvy-mobile.svg") bottom no-repeat;
+  background-color: $color_header-and-signup;
+  background-size: contain;
+  text-align: center;
+
+  &__picture {
+    width: 85%;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__description {
+    padding: 0 1.5rem;
+  }
+
+  &__button {
+    @extend .button;
+  }
+}
+
+.features {
+  padding: 1.5rem;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  text-align: center;
+  padding: 8rem 2rem;
+
+  &__card {
+    & svg {
+      transform: scale(0.8);
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.stayproductive {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem;
+  align-items: center;
+
+  &__picture {
+      width: 85%;
+  }
+
+  &__title {
+      font-weight: 700;
+      font-size: 1.3rem;
+  }  
+
+  &__description {
+      margin-top: 1rem;
+  }
+
+  &__link {
+
+      color: $color_button-gradient1;
+      text-decoration: none;
+      margin-top: 1rem;
+      width: fit-content;
+      display: flex;
+      gap: .5rem;
+      border-bottom: .1rem solid $color_button-gradient1;
+  }
 }
