@@ -248,17 +248,17 @@
       <section class="testimonials">
         <div class="testimonials__card">
           <p
-            class="
-              testimonials__card__content testimonials__card__content--quotes
-            "
-          >
+            class="testimonials__card__content">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
             collaboration machine.
           </p>
           <div class="testimonials__card__author">
-            Satish Patel<br />
-            <span>Founder & CEO, Huddle</span>
+            <img class="testimonials__card__author__picture" src="/images/profile-1.jpg" alt="picture of Satish Patel" />
+            <div class="testimonials__card__author__details">
+              <span class="testimonials__card__author__name">Satish Patel</span>
+              <span class="testimonials__card__author__position">Founder & CEO, Huddle</span>
+            </div>
           </div>
         </div>
         <div class="testimonials__card">
@@ -268,35 +268,41 @@
             collaboration machine.
           </p>
           <div class="testimonials__card__author">
-            Bruce McKenzie<br />
-            <span>Founder & CEO, Huddle</span>
+            <img class="testimonials__card__author__picture" src="/images/profile-2.jpg" alt="picture of Bruce McKenzie" />
+            <div class="testimonials__card__author__details">
+              <span class="testimonials__card__author__name">Bruce McKenzie</span>
+              <span class="testimonials__card__author__position">Founder & CEO, Huddle</span>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="testimonials__card">
           <p class="testimonials__card__content">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
             collaboration machine.
           </p>
           <div class="testimonials__card__author">
-            Iva Boyd<br />
-            <span>Founder & CEO, Huddle</span>
+            <img class="testimonials__card__author__picture" src="/images/profile-3.jpg" alt="picture of Iva Boyd" />
+            <div class="testimonials__card__author__details">
+              <span class="testimonials__card__author__name">Iva Boyd</span>
+              <span class="testimonials__card__author__position">Founder & CEO, Huddle</span>
+            </div>
           </div>
         </div>
       </section>
 
       <aside class="signup">
         <h1 class="signup__title">Get early access today</h2>
-        <p>
+        <p class="signup__details">
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </p>
         <form action="#" class="signup__form">
-          <input type="email" placeholder="email@example.com" />
+          <input class="signup__form__input" type="email" placeholder="email@example.com" />
           <button
             type="submit"
-            class="getstarted__button getstarted__button--signup"
+            class="signup__form__submit"
           >
             Get Started For Free
           </button>
@@ -304,13 +310,16 @@
       </aside>
     </main>
 
-    <footer>
-      <p class="footer__location">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
-      </p>
-      <a href="tel:+1-543-123-4567" class="footer__phone">+1-543-123-4567</a>
-      <a href="example@fylo.com" class="footer__email">example@fylo.com</a>
+    <footer class="footer">
+      <img src="images/logo.svg" alt="fylo logo" class="footer__logo" />
+      <div class="footer__coordinates">
+        <p class="footer__coordinates__location">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua
+        </p>
+        <a href="tel:+1-543-123-4567" class="footer__coordinates__phone">+1-543-123-4567</a>
+        <a href="example@fylo.com" class="footer__coordinates__email">example@fylo.com</a>
+      </div>
       <ul class="footer__links">
         <li><a href="#">About Us</a></li>
         <li><a href="#">Jobs</a></li>

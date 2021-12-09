@@ -22,13 +22,19 @@ h2,
 }
 
 .button {
-  background-color: $color_button-gradient2;
+  background: linear-gradient(
+    to right,
+    $color_button-gradient1,
+    $color_button-gradient2
+  );
   text-decoration: none;
   color: $color_maintext;
   font-family: $font_headings;
   font-weight: 700;
-  padding: 0.6rem 4.5rem;
+  padding: 0.8rem 4.5rem;
   border-radius: 10rem;
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.5rem $color_footer-bg;
 }
 
 body {
@@ -94,7 +100,6 @@ body {
 }
 
 .features {
-  padding: 1.5rem;
   display: flex;
   gap: 5rem;
   flex-direction: column;
@@ -117,30 +122,192 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 1.5rem;
+  padding: 2.5rem;
   align-items: center;
 
   &__picture {
-      width: 85%;
+    width: 85%;
   }
 
   &__title {
-      font-weight: 700;
-      font-size: 1.3rem;
-  }  
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
 
   &__description {
-      margin-top: 1rem;
+    margin-top: 1rem;
   }
 
   &__link {
+    color: $color_button-gradient1;
+    text-decoration: none;
+    margin-top: 1rem;
+    width: fit-content;
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 0.1rem solid $color_button-gradient1;
+  }
+}
 
-      color: $color_button-gradient1;
-      text-decoration: none;
-      margin-top: 1rem;
-      width: fit-content;
+.testimonials {
+  position: relative;
+  background: url("../images/bg-quotes.png") no-repeat 3.5rem 0;
+  background-size: 2rem;
+  margin: 6.4rem 0 8rem;
+  padding: 1.6rem 3rem;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: column;
+  gap: 2rem;
+  &__card {
+    background-color: $color_testimonials-bg;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+
+    &__content {
+      padding-bottom: 1rem;
+    }
+
+    &__author {
       display: flex;
-      gap: .5rem;
-      border-bottom: .1rem solid $color_button-gradient1;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 700;
+
+      &__picture {
+        height: 2.3rem;
+        border-radius: 10rem;
+      }
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2rem;
+      }
+
+      &__position {
+        font-weight: 400;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+.signup {
+  position: relative;
+  z-index: 1;
+  margin: 0 1.5rem -10rem;
+  padding: 2rem;
+  background-color: $color_header-and-signup;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.8rem rgb(8, 12, 17);
+  text-align: center;
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  &__details {
+    padding: 0.5rem 0 2rem;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__input {
+      padding: 0.8rem 2rem;
+      border-radius: 10rem;
+      border: none;
+
+      &::placeholder {
+        font-size: 0.8rem;
+      }
+    }
+
+    &__submit {
+      @extend .button;
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  z-index: 0;
+  background-color: $color_footer-bg;
+  padding: 13rem 2.5rem 2rem;
+
+  &__logo {
+    width: 50%;
+    padding-bottom: 2rem;
+  }
+
+  &__coordinates {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    &__location {
+      position: relative;
+      padding-left: 3rem;
+      &::before {
+        position: absolute;
+        top: .5rem;
+        left: 0;
+        content: url('../images/icon-location.svg');
+      }
+    }
+
+    &__phone {
+      text-decoration: none;
+      color: $color_maintext;
+      position: relative;
+      padding-left: 3rem;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url('../images/icon-phone.svg');
+      }
+    }
+
+    &__email {
+      @extend .footer__coordinates__phone;
+      &::before {
+        content: url('../images/icon-email.svg');
+      }
+    }
+  }
+
+  &__links {
+    &:first-of-type {
+      padding: 5rem 0 2rem;
+    }
+    & li {
+      padding: .5rem 0;
+    }
+    & a {
+      color: $color_maintext;
+      text-decoration: none;
+    }
+  }
+
+  &__socialmedia {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: .1rem solid $color_maintext;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 10rem;
+    }
   }
 }

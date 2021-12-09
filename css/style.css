@@ -11,14 +11,18 @@ h2,
   line-height: 2.5rem;
 }
 
-.button, .getstarted__button {
-  background-color: #339ecc;
+.button, .getstarted__button, .signup__form__submit {
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(to right, #65e2d9, #339ecc);
   text-decoration: none;
   color: white;
   font-family: "Raleway";
   font-weight: 700;
-  padding: 0.6rem 4.5rem;
+  padding: 0.8rem 4.5rem;
   border-radius: 10rem;
+  border: none;
+  -webkit-box-shadow: 0.2rem 0.2rem 0.5rem #0b1523;
+          box-shadow: 0.2rem 0.2rem 0.5rem #0b1523;
 }
 
 body {
@@ -100,7 +104,6 @@ body {
 }
 
 .features {
-  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +135,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
-  padding: 1.5rem;
+  padding: 2.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,7 +164,218 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   border-bottom: 0.1rem solid #65e2d9;
+}
+
+.testimonials {
+  position: relative;
+  background: url("../images/bg-quotes.png") no-repeat 3.5rem 0;
+  background-size: 2rem;
+  margin: 6.4rem 0 8rem;
+  padding: 1.6rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonials__card {
+  background-color: #202a3c;
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.testimonials__card__content {
+  padding-bottom: 1rem;
+}
+
+.testimonials__card__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  font-weight: 700;
+}
+
+.testimonials__card__author__picture {
+  height: 2.3rem;
+  border-radius: 10rem;
+}
+
+.testimonials__card__author__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.2rem;
+}
+
+.testimonials__card__author__position {
+  font-weight: 400;
+  font-size: 0.6rem;
+}
+
+.signup {
+  position: relative;
+  z-index: 1;
+  margin: 0 1.5rem -10rem;
+  padding: 2rem;
+  background-color: #1c2431;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.3rem 0.3rem 0.8rem #080c11;
+          box-shadow: 0.3rem 0.3rem 0.8rem #080c11;
+  text-align: center;
+}
+
+.signup__title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.signup__details {
+  padding: 0.5rem 0 2rem;
+}
+
+.signup__form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signup__form__input {
+  padding: 0.8rem 2rem;
+  border-radius: 10rem;
+  border: none;
+}
+
+.signup__form__input::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.signup__form__input:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.signup__form__input::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.signup__form__input::placeholder {
+  font-size: 0.8rem;
+}
+
+.signup__form__submit {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  z-index: 0;
+  background-color: #0b1523;
+  padding: 13rem 2.5rem 2rem;
+}
+
+.footer__logo {
+  width: 50%;
+  padding-bottom: 2rem;
+}
+
+.footer__coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__coordinates__location {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.footer__coordinates__location::before {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  content: url("../images/icon-location.svg");
+}
+
+.footer__coordinates__phone, .footer__coordinates__email {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.footer__coordinates__phone::before, .footer__coordinates__email::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../images/icon-phone.svg");
+}
+
+.footer__coordinates__email::before {
+  content: url("../images/icon-email.svg");
+}
+
+.footer__links:first-of-type {
+  padding: 5rem 0 2rem;
+}
+
+.footer__links li {
+  padding: .5rem 0;
+}
+
+.footer__links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__socialmedia {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.footer__socialmedia a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.1rem solid white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10rem;
 }
 /*# sourceMappingURL=style.css.map */
