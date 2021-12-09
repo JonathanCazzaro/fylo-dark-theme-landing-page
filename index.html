@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="icon"
       type="image/png"
@@ -312,36 +312,42 @@
 
     <footer class="footer">
       <img src="images/logo.svg" alt="fylo logo" class="footer__logo" />
-      <div class="footer__coordinates">
-        <p class="footer__coordinates__location">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua
-        </p>
-        <a href="tel:+1-543-123-4567" class="footer__coordinates__phone">+1-543-123-4567</a>
-        <a href="example@fylo.com" class="footer__coordinates__email">example@fylo.com</a>
+      <div class="footer__content">
+        <div class="footer__coordinates">
+          <p class="footer__coordinates__location">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua
+          </p>
+          <div class="footer__coordinates__wrapper">
+            <a href="tel:+1-543-123-4567" class="footer__coordinates__phone">+1-543-123-4567</a>
+            <a href="example@fylo.com" class="footer__coordinates__email">example@fylo.com</a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <ul class="footer__socialmedia">
+          <li>
+            <a href="#"><img src="images/ico_facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico_twitter.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico_instagram.svg" alt="" /></a>
+          </li>
+        </ul>
       </div>
-      <ul class="footer__links">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <ul class="footer__links">
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-      <ul class="footer__socialmedia">
-        <li>
-          <a href="#"><img src="images/ico_facebook.svg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="images/ico_twitter.svg" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="images/ico_instagram.svg" alt="" /></a>
-        </li>
-      </ul>
     </footer>
   </body>
 </html>

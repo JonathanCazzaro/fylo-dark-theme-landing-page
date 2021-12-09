@@ -39,7 +39,6 @@ h2,
 
 body {
   background-color: $color_main-bg;
-  flex-direction: column;
   line-height: 1.5rem;
 }
 
@@ -109,6 +108,7 @@ body {
   &__card {
     & svg {
       transform: scale(0.8);
+      height: 6.2rem;
     }
 
     &__title {
@@ -122,7 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 8rem;
   align-items: center;
 
   &__picture {
@@ -153,8 +153,7 @@ body {
   position: relative;
   background: url("../images/bg-quotes.png") no-repeat 3.5rem 0;
   background-size: 2rem;
-  margin: 6.4rem 0 8rem;
-  padding: 1.6rem 3rem;
+  padding: 1.6rem 3rem 8rem;
   display: flex;
   font-size: 0.8rem;
   flex-direction: column;
@@ -163,6 +162,7 @@ body {
     background-color: $color_testimonials-bg;
     padding: 1.5rem 1.5rem;
     border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem $color_header-and-signup;
 
     &__content {
       padding-bottom: 1rem;
@@ -239,7 +239,7 @@ body {
   position: relative;
   z-index: 0;
   background-color: $color_footer-bg;
-  padding: 13rem 2.5rem 2rem;
+  padding: 15rem 2.5rem 2rem;
 
   &__logo {
     width: 50%;
@@ -250,14 +250,21 @@ body {
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
     &__location {
       position: relative;
       padding-left: 3rem;
       &::before {
         position: absolute;
-        top: .5rem;
+        top: 0.5rem;
         left: 0;
-        content: url('../images/icon-location.svg');
+        content: url("../images/icon-location.svg");
       }
     }
 
@@ -268,26 +275,29 @@ body {
       padding-left: 3rem;
       &::before {
         position: absolute;
-        top: 0;
+        top: 0.15rem;
         left: 0;
-        content: url('../images/icon-phone.svg');
+        content: url("../images/icon-phone.svg");
       }
     }
 
     &__email {
       @extend .footer__coordinates__phone;
       &::before {
-        content: url('../images/icon-email.svg');
+        content: url("../images/icon-email.svg");
       }
     }
   }
 
   &__links {
-    &:first-of-type {
-      padding: 5rem 0 2rem;
-    }
-    & li {
-      padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    & ul {
+      display: flex;    
+      flex-direction: column; 
+      gap: .8rem;
     }
     & a {
       color: $color_maintext;
@@ -304,10 +314,262 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      border: .1rem solid $color_maintext;
-      width: 2rem;
-      height: 2rem;
+      border: 0.05rem solid $color_maintext;
+      width: 2.3rem;
+      height: 2.3rem;
       border-radius: 10rem;
+    }
+  }
+}
+
+@media screen and (min-width: "480px") {
+  :root {
+    font-size: 18px;
+  }
+
+  .header {
+    padding: 3rem 5rem;
+  }
+
+  .getstarted {
+    padding: 0 5rem;
+  }
+
+  .features {
+    padding: 6rem;
+    &__card svg {
+      transform: unset;
+      height: 5rem;
+    }
+  }
+
+  .stayproductive {
+    padding: 2.5rem 5rem 8rem;
+  }
+
+  .testimonials {
+    background: url("../images/bg-quotes.png") no-repeat 6.5rem 0;
+    background-size: 2rem;
+    padding: 1.5rem 6rem 8rem;
+  }
+
+  .signup {
+    margin: 0 5rem -10rem;
+
+    &__form {
+      width: 75%;
+      margin: auto;
+    }
+  }
+
+  .footer {
+    padding: 15rem 3.5rem 2rem;
+    &__logo {
+      width: 30%;
+    }
+
+    &__coordinates {
+      flex-direction: row;
+      gap: 3rem;
+      &__wrapper,
+      &__location {
+        flex-basis: 50%;
+        align-self: center;
+      }
+    }
+
+    &__links {
+      flex-direction: row;
+      justify-content: center;
+      gap: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: "1280px") {
+  :root {
+    font-size: 22px;
+  }
+
+  .header {
+    &__logo {
+      width: 18%;
+    }
+  }
+
+  .getstarted {
+    padding: 0 12rem;
+  }
+
+  .features {
+    padding: 6rem 10rem;
+    flex-flow: row wrap;
+    gap: 4rem 1rem;
+    justify-content: space-around;
+    &__card {
+      flex-basis: 48%;
+      & svg {
+        height: 4rem;
+        transform: scale(1.4);
+        padding: 1rem;
+      }
+      &__description {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .stayproductive {
+    flex-direction: row;
+    gap: 3rem;
+
+    &__picture {
+      flex-basis: 50%;
+    }
+
+    &__textcontainer {
+      flex-basis: 50%;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+  }
+
+  .testimonials {
+    flex-direction: row;
+  }
+
+  .signup {
+    margin: 0 10rem -10rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__form {
+      width: 60%;
+
+      &__submit {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding-bottom: 5rem;
+    &__logo {
+      width: 20%;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__coordinates {
+      gap: 2rm;
+      width: 50%;
+
+      &__wrapper {
+        align-self: unset;
+        flex-basis: unset;
+        gap: unset;
+      }
+      &__location {
+        flex-basis: unset;
+        align-self: unset;
+        padding-left: 2rem;
+      }
+
+      &__phone,
+      &__email {
+        align-self: unset;
+        padding-left: 2rem;
+        flex-basis: unset;
+      }
+    }
+
+    &__links {
+      margin: unset;
+      width: 15rem;
+      gap: unset;
+      justify-content: space-between;
+      & ul {
+        gap: .5rem;
+      }
+    }
+
+    &__socialmedia {
+      margin: unset;
+      justify-content: space-between;
+      gap: unset;
+      width: 6rem;
+      & a {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: '1440px') {
+  :root {
+    font-size: 24px;
+  }
+
+  .getstarted {
+    padding: 0 18rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      padding: 0 5rem;
+    }
+  }
+
+  .features {
+    &__card {
+      flex-basis: 35%;
+      & svg {
+        height: 4rem;
+        transform: scale(1.4);
+        padding: 1rem;
+      }
+      &__description {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .stayproductive {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .signup {
+    margin: 0 16rem -10rem;
+
+    &__form {
+      width: 100%;
+      flex-direction: row;
+      gap: unset;
+      justify-content: space-evenly;
+
+      &__input {
+        flex-basis: 50%;
+        padding: 1rem 2rem;
+      }
+
+      &__submit {
+        flex-basis: 30%;
+        padding: 0;
+        font-size: .8rem;
+      }
     }
   }
 }
